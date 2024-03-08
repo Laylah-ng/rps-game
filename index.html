@@ -6,55 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-      // this function is used to get random choice from computer
-      function getComputerChoice() {
-        let computerChoice = ["rock", "paper", "scissors"]
-        let randomChoice = Math.floor(Math.random() * computerChoice.length)
-        return computerChoice[randomChoice]
-      }
-      // function that plays a single round of Rock Paper Scissors
-      function playRound(playerSelection, computerSelection) {
-        playerSelection.toLowerCase()
-        if (playerSelection === computerSelection) {
-          return "ties"
-        } else if (
-          (playerSelection === "rock" && computerSelection === "scissors") ||
-          (playerSelection === "paper" && computerSelection === "rock") ||
-          (playerSelection === "scissors" && computerSelection === "paper")
-        ) {
-          return `You win! ${playerSelection} beats ${computerSelection}`
-        } else {
-          return `you lose! ${computerSelection} beats ${playerSelection}`
-        }
-      }
+    <button onclick="playRound('rock')">rock</button>
+    <button onclick="playRound('paper')">paper</button>
+    <button onclick="playRound('scissors')">scissors</button>
 
-      //  function that plays a five round game
-      function game() {
-        let playerScoreCounter = 0
-        let computerScoreCounter = 0
+      <div id="roundNumber">ROUND 1</div>
+      <div id="playerChoice">PLAYER:</div>
+      <div id="computerChoice">COMPUTER:</div>
+    <div id="roundResult"></div>
+    <div id="scoreDisplay"></div>
+    <div id="finalResult"></div>
+   
 
-        for (let i = 1; i <= 5; i++) {
-          let playerSelection = prompt(`Round ${i}: Enter your choice`)
-          let computerSelection = getComputerChoice()
-          console.log(`computer chose: ${computerSelection}`)
-          let output = playRound(playerSelection, computerSelection)
 
-          if (output.includes("win")) {
-            playerScoreCounter++
-          } else if (output.includes("lose")) {
-            computerScoreCounter++
-          }
-        }
-        if (playerScoreCounter > computerScoreCounter) {
-          console.log("Congratulations! You win the game!")
-        } else if (playerScoreCounter < computerScoreCounter) {
-          console.log("Sorry! You lose the game.")
-        } else {
-          console.log("The game is a tie!")
-        }
-      }
-      game()
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
