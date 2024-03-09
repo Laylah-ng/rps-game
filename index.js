@@ -34,11 +34,11 @@ function playRound(playerSelection) {
     result = `you lose! ${computerSelection} beats ${playerSelection}`
     computerScore++
   }
-  roundNumber.textContent = `Round: ${round}`
-  playerChoice.textContent = `player: ${playerSelection}`
-  computerChoice.textContent = `computer: ${computerSelection}`
+  roundNumber.textContent = `ROUND: ${round}`
+  playerChoice.textContent = `PLAYER: ${playerSelection}`
+  computerChoice.textContent = `COMPUTER: ${computerSelection}`
   roundResult.textContent = result
-  scoreDisplay.textContent = `player score: ${playerScore}, computer score: ${computerScore}`
+  scoreDisplay.textContent = `SCORE: ${playerScore} - ${computerScore}`
 
   if (round >= 5) {
     showfinalResult()
@@ -55,5 +55,5 @@ function showfinalResult() {
   }
   document.querySelector(
     "#finalResult"
-  ).textContent = `final result: ${finalResult}`
+  ).textContent = `FINAL RESULT: ${finalResult}`
 }

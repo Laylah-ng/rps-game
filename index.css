@@ -1,0 +1,37 @@
+.title{
+    text-align: center;
+    color: blue;
+}
+body{
+    background-color: aqua;
+}
+button{
+    background-color: yellow;
+    font-weight: 900;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(185, 185, 63)
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.result{
+    font-weight: 900;
+    font-size: 18px;background-color: navy;
+    color: white;
+    margin: 0 auto;
+    width: 300px;
+    padding: 5px;
+    
+   
+
+}
